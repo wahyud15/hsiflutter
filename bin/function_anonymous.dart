@@ -1,9 +1,9 @@
 void main() {
-  var upperFunction = (String name) {
+  upperFunction(String name) {
     return name.toUpperCase();
-  };
+  }
 
-  var lowerFunction = (String name) => name.toLowerCase();
+  lowerFunction(String name) => name.toLowerCase();
 
   //Anonymous Function
   //Inner Function
@@ -11,10 +11,11 @@ void main() {
   print(lowerFunction('Asikin'));
 
   helloPrint('Wahyudi', (words) {
-    if (words == 'gila')
+    if (words == 'gila') {
       return '****';
-    else
+    } else {
       return words;
+    }
   });
 }
 
