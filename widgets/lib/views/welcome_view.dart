@@ -15,14 +15,13 @@ class WelcomeView extends GetView<WelcomeController> {
       ),
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: Get.width * 0.6,
               height: Get.height * 0.25,
-              color: Colors.amber[400],
               child: Image.asset(
                 "assets/logo/logo.png",
                 fit: BoxFit.cover,
@@ -45,7 +44,7 @@ class WelcomeView extends GetView<WelcomeController> {
               "Best and popular apps for live education course from home",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 14,
                 color: Color(0xFF8C8C8C),
               ),
             ),
@@ -64,6 +63,7 @@ class WelcomeView extends GetView<WelcomeController> {
                 ),
                 child: const Text(
                   "Get Started",
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ),
