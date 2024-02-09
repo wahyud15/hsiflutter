@@ -10,9 +10,6 @@ class WelcomeView extends GetView<WelcomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Welcome View"),
-      ),
       backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -54,7 +51,7 @@ class WelcomeView extends GetView<WelcomeController> {
             Container(
               width: Get.width,
               child: ElevatedButton(
-                onPressed: () => Get.toNamed(PageName.login),
+                onPressed: () => Get.offAllNamed(PageName.login),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFEC5F5F),
                   padding: const EdgeInsets.symmetric(

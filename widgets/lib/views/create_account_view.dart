@@ -1,8 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:widgets/routes/page_name.dart';
 
-class LoginView extends StatelessWidget {
+class CreateAccountView extends StatelessWidget {
+  const CreateAccountView({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -16,6 +19,17 @@ class LoginView extends StatelessWidget {
               "assets/logo/logomark.png",
               fit: BoxFit.contain,
             ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              label: Text("Fullname"),
+              filled: true,
+              fillColor: Color(0xFFF6F7FA),
+              border: InputBorder.none,
+            ),
+          ),
+          SizedBox(
+            height: 5,
           ),
           TextField(
             decoration: InputDecoration(
@@ -155,13 +169,49 @@ class LoginView extends StatelessWidget {
             ),
           ),
           SizedBox(
+            height: 30,
+          ),
+          Container(
+            child: RichText(
+              textAlign: TextAlign.center,
+              text: TextSpan(children: [
+                TextSpan(
+                  text: "By signing up you accept the ",
+                  style: TextStyle(
+                    color: Color(
+                      0xFFC7C9D9,
+                    ),
+                  ),
+                ),
+                TextSpan(
+                    text: "The Terms of Service ",
+                    style: TextStyle(color: Colors.blue),
+                    recognizer: TapGestureRecognizer()..onTap = () {}),
+                TextSpan(
+                  text: "and ",
+                  style: TextStyle(
+                    color: Color(
+                      0xFFC7C9D9,
+                    ),
+                  ),
+                ),
+                TextSpan(
+                  text: "Privacy Policy",
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                ),
+              ]),
+            ),
+          ),
+          SizedBox(
             height: 80,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Don't have an account ?",
+                "Already have an account ?",
                 style: TextStyle(
                   color: Color(
                     0xFFC7C9D9,
@@ -169,9 +219,9 @@ class LoginView extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () => Get.offNamed(PageName.createAccount),
+                onPressed: () => Get.offNamed(PageName.login),
                 child: Text(
-                  "Sign Up",
+                  "Log in",
                   style: TextStyle(
                     color: Color(
                       0xFF0082CD,
