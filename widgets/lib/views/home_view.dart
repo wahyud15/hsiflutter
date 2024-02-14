@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:widgets/controllers/welcome_controller.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
