@@ -1,11 +1,13 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:widgets/controllers/welcome_controller.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
-  var current = 0.obs;
-  CarouselController carouselController = CarouselController();
+  // var current = 0.obs;
+  // CarouselController carouselController = CarouselController();
+  final homeController = Get.put(WelcomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -214,20 +216,21 @@ class HomeView extends StatelessWidget {
               children: [
                 CarouselSlider(
                   items: imageSliders,
-                  carouselController: carouselController,
+                  carouselController: homeController.carouselController,
                   options: CarouselOptions(
                       autoPlay: true,
                       enlargeCenterPage: true,
                       aspectRatio: 2.0,
                       onPageChanged: (index, reason) {
-                        current.value = index;
+                        homeController.current.value = index;
                       }),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: imgList.asMap().entries.map((entry) {
                     return GestureDetector(
-                      onTap: () => carouselController.animateToPage(entry.key),
+                      onTap: () => homeController.carouselController
+                          .animateToPage(entry.key),
                       child: Obx(
                         () => Container(
                           width: 20.0,
@@ -236,7 +239,7 @@ class HomeView extends StatelessWidget {
                               vertical: 8.0, horizontal: 4.0),
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
-                            color: current.value == entry.key
+                            color: homeController.current.value == entry.key
                                 ? Color(0xFFEC5F5F)
                                 : Colors.grey[400],
                             borderRadius: BorderRadius.circular(5),
