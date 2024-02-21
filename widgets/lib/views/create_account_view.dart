@@ -11,7 +11,7 @@ class CreateAccountView extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       body: ListView(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         children: [
           Container(
             height: 140,
@@ -20,7 +20,7 @@ class CreateAccountView extends StatelessWidget {
               fit: BoxFit.contain,
             ),
           ),
-          TextField(
+          const TextField(
             decoration: InputDecoration(
               label: Text("Fullname"),
               filled: true,
@@ -28,10 +28,10 @@ class CreateAccountView extends StatelessWidget {
               border: InputBorder.none,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          TextField(
+          const TextField(
             decoration: InputDecoration(
               label: Text("Email"),
               fillColor: Color(0xFFF6F7FA),
@@ -39,15 +39,15 @@ class CreateAccountView extends StatelessWidget {
               filled: true,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           TextField(
             obscureText: true,
             decoration: InputDecoration(
-              label: Text("Password"),
+              label: const Text("Password"),
               filled: true,
-              fillColor: Color(0xFFF6F7FA),
+              fillColor: const Color(0xFFF6F7FA),
               border: InputBorder.none,
               suffixIcon: IconButton(
                 onPressed: () {},
@@ -58,49 +58,49 @@ class CreateAccountView extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Container(
             width: Get.width,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEC5F5F),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10,
+                ),
+              ),
+              child: const Text(
                 "Log In",
                 style: TextStyle(
                   color: Colors.white,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFEC5F5F),
-                padding: EdgeInsets.symmetric(
-                  vertical: 10,
                 ),
               ),
             ),
           ),
           TextButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               "Fogot Password ?",
               style: TextStyle(
                 color: Color(0xFF0082CD),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
             children: [
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     right: 10,
                   ),
                   height: 1,
-                  color: Color(0xFFC7C9D9),
+                  color: const Color(0xFFC7C9D9),
                 ),
               ),
-              Text(
+              const Text(
                 "or",
                 style: TextStyle(
                   color: Color(0xFFC7C9D9),
@@ -108,16 +108,16 @@ class CreateAccountView extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     left: 10,
                   ),
                   height: 1,
-                  color: Color(0xFFC7C9D9),
+                  color: const Color(0xFFC7C9D9),
                 ),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Container(
@@ -127,22 +127,22 @@ class CreateAccountView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset("assets/icon/facebook.png"),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Text(
+                  const Text(
                     "Log in with Facebook",
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFF0082CD),
-                padding: EdgeInsets.symmetric(vertical: 10),
+                backgroundColor: const Color(0xFF0082CD),
+                padding: const EdgeInsets.symmetric(vertical: 10),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Container(
@@ -152,7 +152,7 @@ class CreateAccountView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset("assets/icon/google.png"),
-                  Text(
+                  const Text(
                     "Log in with Google",
                     style: TextStyle(
                       color: Color(0xFF303030),
@@ -161,21 +161,21 @@ class CreateAccountView extends StatelessWidget {
                 ],
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFF6F7FA),
-                padding: EdgeInsets.symmetric(
+                backgroundColor: const Color(0xFFF6F7FA),
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
             child: RichText(
               textAlign: TextAlign.center,
               text: TextSpan(children: [
-                TextSpan(
+                const TextSpan(
                   text: "By signing up you accept the ",
                   style: TextStyle(
                     color: Color(
@@ -185,9 +185,9 @@ class CreateAccountView extends StatelessWidget {
                 ),
                 TextSpan(
                     text: "The Terms of Service ",
-                    style: TextStyle(color: Colors.blue),
+                    style: const TextStyle(color: Colors.blue),
                     recognizer: TapGestureRecognizer()..onTap = () {}),
-                TextSpan(
+                const TextSpan(
                   text: "and ",
                   style: TextStyle(
                     color: Color(
@@ -195,7 +195,7 @@ class CreateAccountView extends StatelessWidget {
                     ),
                   ),
                 ),
-                TextSpan(
+                const TextSpan(
                   text: "Privacy Policy",
                   style: TextStyle(
                     color: Colors.blue,
@@ -204,13 +204,13 @@ class CreateAccountView extends StatelessWidget {
               ]),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Already have an account ?",
                 style: TextStyle(
                   color: Color(
@@ -220,7 +220,7 @@ class CreateAccountView extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () => Get.offNamed(PageName.login),
-                child: Text(
+                child: const Text(
                   "Log in",
                   style: TextStyle(
                     color: Color(
