@@ -35,10 +35,18 @@ dependencies:
   font_awesome_flutter: ^10.7.0
   carousel_slider: ^4.2.1
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_launcher_icons:
+
+flutter_launcher_icons:
+  #  image_path: "assets/images/icon-128x128.png"
+  image_path_android: "assets/icons/android-chrome-512x512.png"
+  android: true
+  web:
+    generate: true
+    image_path: "assets/icons/android-chrome-512x512.png"
 
 dev_dependencies:
   flutter_test:

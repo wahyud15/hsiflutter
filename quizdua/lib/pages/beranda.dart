@@ -54,7 +54,7 @@ class Beranda extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue[900],
+        backgroundColor: const Color(0xFF223874),
         titleSpacing: 10,
         leadingWidth: 40,
         leading: Row(
@@ -164,7 +164,7 @@ class Beranda extends StatelessWidget {
                             shape: BoxShape.rectangle,
                             borderRadius: BorderRadius.circular(20),
                             color: current.value == entry.key
-                                ? Colors.blue[900]
+                                ? const Color(0xFF223874)
                                 : Colors.grey,
                           ),
                         )),
@@ -223,11 +223,11 @@ class Beranda extends StatelessWidget {
                             ),
                             Expanded(
                               child: RichText(
-                                  text: TextSpan(children: [
+                                  text: const TextSpan(children: [
                                 TextSpan(
                                     text:
                                         "Pendaftaran Program Hifzhul Mutun Angkatan Ke-3 telah dibuka",
-                                    style: TextStyle(color: Colors.blue[900])),
+                                    style: TextStyle(color: Color(0xFF223874))),
                               ])),
                             ),
                           ],
@@ -255,7 +255,7 @@ class Beranda extends StatelessWidget {
                       TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
-                          backgroundColor: Colors.blue,
+                          backgroundColor: const Color(0xFF223874),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
                           ),
@@ -317,10 +317,10 @@ class Beranda extends StatelessWidget {
                               color: Colors.blue[50],
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            child: Text(
+                            child: const Text(
                               "Program Reguler",
                               style: TextStyle(
-                                color: Colors.blue[900],
+                                color: Color(0xFF223874),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 12,
                               ),
@@ -363,53 +363,52 @@ class Beranda extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Expanded(
-                            flex: 4,
-                            child: Container(
-                              width: 80,
-                              decoration: BoxDecoration(
-                                color: Colors.blue[100],
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  FaIcon(
-                                    FontAwesomeIcons.bars,
-                                    size: 12,
+                          Container(
+                            width: 80,
+                            decoration: BoxDecoration(
+                              color: Colors.blue[100],
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: const Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                FaIcon(
+                                  FontAwesomeIcons.bars,
+                                  size: 15,
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Text(
+                                  "2 Soal",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  Text(
-                                    "2 Soal",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(),
+                          const SizedBox(
+                            width: 10,
                           ),
+                          // Expanded(
+                          //   flex: 1,
+                          //   child: Container(),
+                          // ),
                           Expanded(
                             flex: 10,
                             child: Container(
-                              width: 15,
+                              // width: 15,
                               padding: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 color: Colors.blue[100],
                                 borderRadius: BorderRadius.circular(5),
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   const FaIcon(
                                     FontAwesomeIcons.clockRotateLeft,
-                                    size: 18,
+                                    size: 15,
                                   ),
                                   const SizedBox(
                                     width: 8,
@@ -441,8 +440,8 @@ class Beranda extends StatelessWidget {
                         ),
                         label: const Text("Dengarkan Audio"),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blue,
-                          side: const BorderSide(color: Colors.blue),
+                          foregroundColor: const Color(0xFF223874),
+                          side: const BorderSide(color: Color(0xFF223874)),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5),
                           ),

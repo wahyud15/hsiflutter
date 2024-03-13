@@ -73,15 +73,15 @@ class Profile extends StatelessWidget {
                       FontAwesomeIcons.penToSquare,
                       size: 15,
                     ),
-                    label: Text(
+                    label: const Text(
                       "Ubah",
                       style: TextStyle(
-                        color: Colors.blue[900],
+                        color: Color(0xFF223874),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     style: TextButton.styleFrom(
-                      iconColor: Colors.blue[900],
+                      iconColor: const Color(0xFF223874),
                     )),
               ),
             ],
@@ -93,10 +93,10 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              FaIcon(
+              const FaIcon(
                 FontAwesomeIcons.whatsapp,
                 size: 20,
-                color: Colors.blue[900],
+                color: Color(0xFF223874),
               ),
               const SizedBox(
                 width: 10,
@@ -128,10 +128,10 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              FaIcon(
+              const FaIcon(
                 FontAwesomeIcons.house,
                 size: 15,
-                color: Colors.blue[900],
+                color: Color(0xFF223874),
               ),
               const SizedBox(
                 width: 10,
@@ -165,10 +165,10 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              FaIcon(
+              const FaIcon(
                 FontAwesomeIcons.mapLocation,
                 size: 15,
-                color: Colors.blue[900],
+                color: Color(0xFF223874),
               ),
               const SizedBox(
                 width: 10,
@@ -202,10 +202,10 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              FaIcon(
+              const FaIcon(
                 FontAwesomeIcons.clock,
                 size: 15,
-                color: Colors.blue[900],
+                color: Color(0xFF223874),
               ),
               const SizedBox(
                 width: 10,
@@ -239,20 +239,20 @@ class Profile extends StatelessWidget {
             height: 25,
             thickness: 1,
           ),
-          Row(
+          const Row(
             children: [
               FaIcon(
                 FontAwesomeIcons.headset,
                 size: 20,
-                color: Colors.blue[900],
+                color: Color(0xFF223874),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
               Text(
                 "List Admin",
                 style: TextStyle(
-                  color: Colors.blue[900],
+                  color: Color(0xFF223874),
                   fontWeight: FontWeight.bold,
                 ),
               )
@@ -304,11 +304,11 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(
+              const Text(
                 "Program Reguler",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue[900],
+                    color: Color(0xFF223874),
                     fontSize: 12),
               ),
               Expanded(child: Container()),
@@ -379,11 +379,11 @@ class Profile extends StatelessWidget {
           ),
           Row(
             children: [
-              Text(
+              const Text(
                 "Program Reguler",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue[900],
+                    color: Color(0xFF223874),
                     fontSize: 12),
               ),
               Expanded(child: Container()),
